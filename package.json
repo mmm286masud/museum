@@ -1,0 +1,13 @@
+{
+  "name": "retro-handheld-gaming-museum",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spec-driven museum website for retro handheld gaming.",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}
