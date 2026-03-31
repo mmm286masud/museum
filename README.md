@@ -1,5 +1,7 @@
 # Retro Handheld Gaming Museum
 
+**Live View:** [https://mmm286masud.github.io/museum/](https://mmm286masud.github.io/museum/)
+
 This repository contains a production-oriented museum website about retro
 handheld gaming.
 
