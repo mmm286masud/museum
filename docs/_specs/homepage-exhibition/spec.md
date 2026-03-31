@@ -94,6 +94,18 @@ Every complete spotlight presentation must include:
 These spotlight fields must still communicate historical context, cultural
 meaning, and narrative value even when the writing remains minimal.
 
+### Artifact imagery
+
+The homepage may use credited stock photography when it improves artifact
+presentation and preserves the museum tone.
+
+Current guardrails:
+
+- image sources must be reputable and stable
+- attribution must remain visible in the live page
+- imagery should support the device or era being discussed
+- photography must not overpower the exhibit copy or chronology
+
 ### Artifact choice
 
 The chronology begins with the Nintendo Game Boy because it gives the museum an
@@ -109,6 +121,7 @@ Validation for each sprint in this workstream should include:
 4. repository format check
 5. required-device coverage in the homepage markup and content docs
 6. consistency against the approved design source
+7. visible attribution for any external artifact photography
 
 ## Sprint Plan
 
@@ -117,8 +130,9 @@ Validation for each sprint in this workstream should include:
 | Sprint 0 | Build the entrance hall homepage and the first complete artifact section                         |
 | Sprint 1 | Expand the homepage into a full chronology hall with the required major handheld devices         |
 | Sprint 2 | Apply the Digital Curator design system from the supplied design archive to the chronology hall  |
-| Sprint 3 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
-| Sprint 4 | Run a cross-page curator QA pass                                                                 |
+| Sprint 3 | Replace placeholder artifact visuals with credited stock photography that fits the museum tone   |
+| Sprint 4 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
+| Sprint 5 | Run a cross-page curator QA pass                                                                 |
 
 ## Future Considerations
 

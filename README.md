@@ -11,7 +11,8 @@ time.
 
 ## What This Project Is
 
-- a static web museum built with HTML, CSS, JavaScript, and local SVG assets
+- a static web museum built with HTML, CSS, JavaScript, local assets, and
+  credited Unsplash photography
 - a Swiss-style digital exhibit focused on handheld systems as historical artifacts
 - a premium editorial homepage organized as a chronological museum route
 - a repository that treats AI as an implementation assistant, not as the system of record
@@ -26,7 +27,7 @@ The current public slice is a chronology-hall homepage with:
 - seven major handheld milestones from Game Boy to Switch
 - premium spotlight copy written in museum language
 - scarcity framing written as preservation context
-- tonal surfaces, asymmetrical pacing, and local device silhouettes
+- tonal surfaces, asymmetrical pacing, and credited Unsplash artifact images
 
 The current workstreams and their status live in
 [`docs/_specs/README.md`](docs/_specs/README.md).
@@ -136,7 +137,7 @@ The current verification model is documented in
 │   └── templates/          # reusable planning templates
 ├── PROJECT_OVERVIEW.md     # full repository overview and current-state map
 ├── index.html              # chronology hall homepage
-├── styles.css              # visual system, typography, surfaces, device silhouettes
+├── styles.css              # visual system, typography, surfaces, and photo presentation
 ├── script.js               # guided route interaction and room status updates
 ├── package.json            # local quality scripts
 └── AGENTS.md               # repository operating rules for future AI sessions

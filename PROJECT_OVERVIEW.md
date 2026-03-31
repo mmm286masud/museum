@@ -65,8 +65,8 @@ The applied design language is:
 - large typographic hero moments
 - strong whitespace and one-device-at-a-time staging
 
-The live implementation uses local font files and local museum content, with no
-dependency on placeholder branding or third-party design assets.
+The live implementation uses local font files, local museum content, and
+credited Unsplash photography for the artifact stages.
 
 ## Technology Snapshot
 
@@ -77,7 +77,8 @@ Current stack:
 - `index.html` for the page structure
 - `styles.css` for the full visual system
 - `script.js` for guided navigation behavior
-- local SVG and font assets under `assets/`
+- local font assets under `assets/`
+- remote Unsplash image delivery with on-page attribution
 - `npm` and `Prettier` for formatting checks
 
 Current verification baseline:
@@ -141,13 +142,14 @@ For a clean orientation path, read these in order:
 The repo currently has two major workstreams:
 
 - `orchestration-foundation` — complete
-- `homepage-exhibition` — in progress, with three completed sprints
+- `homepage-exhibition` — in progress, with four completed sprints
 
 Completed homepage-exhibition sprints:
 
 - Sprint 0 — entrance hall foundation
 - Sprint 1 — chronology hall expansion
 - Sprint 2 — homepage visual refinement
+- Sprint 3 — credited stock photography integration
 
 ## What Exists Now
 
@@ -156,6 +158,7 @@ Implemented now:
 - a single polished homepage
 - a fixed route system with live room tracking
 - six museum rooms with seven major handheld devices
+- credited stock photography across the exhibit route
 - scarcity-oriented museum copy
 - durable planning and QA documentation
 

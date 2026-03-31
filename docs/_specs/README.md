@@ -11,10 +11,10 @@ The durable explanation of that method lives in
 
 ## Workstreams
 
-| Workstream                                            | Status       |    Sprints | What It Produces                                                                          |
-| ----------------------------------------------------- | ------------ | ---------: | ----------------------------------------------------------------------------------------- |
-| [orchestration-foundation](orchestration-foundation/) | **Complete** |          1 | README, agent guide, foundation docs, content architecture starter, format-check baseline |
-| [homepage-exhibition](homepage-exhibition/)           | In Progress  | 3 complete | entrance hall homepage, chronology hall expansion, Digital Curator refinement             |
+| Workstream                                            | Status       |    Sprints | What It Produces                                                                           |
+| ----------------------------------------------------- | ------------ | ---------: | ------------------------------------------------------------------------------------------ |
+| [orchestration-foundation](orchestration-foundation/) | **Complete** |          1 | README, agent guide, foundation docs, content architecture starter, format-check baseline  |
+| [homepage-exhibition](homepage-exhibition/)           | In Progress  | 4 complete | entrance hall homepage, chronology hall expansion, visual refinement, credited photography |
 
 ## Recommended Study Order
 

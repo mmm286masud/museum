@@ -33,7 +33,7 @@ It contains:
 - typography choices
 - spacing and color tokens
 - tonal surface hierarchy and glass navigation
-- CSS-built device silhouettes for the chronology rooms
+- photo framing, credits, and exhibit-stage presentation
 - responsive behavior
 - restrained motion
 
@@ -56,7 +56,13 @@ They currently include:
 - a local SVG illustration of the Game Boy DMG-01
 - local Inter font files under `assets/fonts/`
 
-Keeping these assets local keeps the current build simple and predictable.
+### Remote media
+
+The homepage also uses remote Unsplash image URLs for exhibit photography.
+
+That choice keeps the page visually rich without introducing a build pipeline,
+but it also means the production surface depends on external image delivery.
+Each live image must keep visible attribution in the page markup.
 
 ### npm and Prettier
 
@@ -79,6 +85,7 @@ This is not a full test stack yet. It is the current minimum quality gate.
 - CSS3
 - vanilla JavaScript
 - local SVG and font assets
+- remote Unsplash photography
 - npm
 - Prettier
 

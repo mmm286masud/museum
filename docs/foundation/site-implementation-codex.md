@@ -11,7 +11,7 @@ making changes.
 ## Current File Map
 
 - `index.html` — current chronology hall page
-- `styles.css` — tokens, local typography, tonal surfaces, device silhouettes,
+- `styles.css` — tokens, local typography, tonal surfaces, photo framing,
   responsiveness
 - `script.js` — guided-route interaction and live room-status updates
 - `assets/` — local exhibit imagery and font assets
@@ -56,7 +56,7 @@ It contains:
 - the framing statement
 - the primary route entry
 - the curatorial note
-- the large stage panel with the Game Boy illustration
+- the large stage panel with a credited Game Boy photograph
 
 ### Chronology rooms
 
@@ -109,6 +109,8 @@ Shared component-like patterns include:
 - `.mini-stage`
 - `.statement-card`
 - `.inset-card`
+- `.photo-frame`
+- `.photo-credit`
 - `.spotlight-highlight`
 - `.spotlight-scarcity`
 - `.stage-tags`
@@ -121,14 +123,15 @@ removes forced smooth scrolling for visitors who opt out of motion.
 
 ## Artifact Rendering
 
-The current page uses two artifact strategies:
+The current page uses credited Unsplash photography for the artifact stages.
 
-- the hero uses the local `assets/game-boy-dmg.svg` illustration
-- later rooms use CSS-built silhouette objects under `.device--*` classes
+Each major image surface now combines:
 
-Those silhouettes are presentation helpers, not canonical archival assets. If
-future sprints add photography or richer illustration packages, they should
-replace these shapes through a spec rather than through ad hoc swaps.
+- a framed photo treatment
+- museum copy
+- visible photographer and source attribution
+
+That is the current artifact-rendering system for the live homepage.
 
 ## Interaction Model
 
