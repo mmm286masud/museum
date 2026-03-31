@@ -5,8 +5,8 @@
 The Retro Handheld Gaming Museum is a static museum website that presents major
 handheld gaming devices as historical artifacts instead of consumer products.
 
-The current live product is a single Digital Curator homepage that moves
-visitors through a six-room chronology:
+The current live product is a single homepage that moves visitors through a
+six-room chronology:
 
 1. Origins
 2. Color Evolution
@@ -55,10 +55,7 @@ Each spotlight section follows the same minimal exhibit structure:
 - minimal description
 - scarcity line
 
-## Design Source Applied
-
-The current visual refinement adapts the user-supplied `stitch.zip` design
-archive into the museum's own identity.
+## Design Language
 
 The applied design language is:
 
@@ -68,9 +65,8 @@ The applied design language is:
 - large typographic hero moments
 - strong whitespace and one-device-at-a-time staging
 
-The live implementation does not keep placeholder stitched branding or remote
-design dependencies. The page now uses local font files and local museum
-content.
+The live implementation uses local font files and local museum content, with no
+dependency on placeholder branding or third-party design assets.
 
 ## Technology Snapshot
 
@@ -151,7 +147,7 @@ Completed homepage-exhibition sprints:
 
 - Sprint 0 — entrance hall foundation
 - Sprint 1 — chronology hall expansion
-- Sprint 2 — Digital Curator design application
+- Sprint 2 — homepage visual refinement
 
 ## What Exists Now
 

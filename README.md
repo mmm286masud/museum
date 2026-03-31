@@ -1,29 +1,28 @@
 # Retro Handheld Gaming Museum
 
-This repository is a museum-style website about retro handheld gaming and a
-teaching example of spec-driven AI orchestration.
+This repository contains a production-oriented museum website about retro
+handheld gaming.
 
-The product is the site. The deeper lesson is the process used to build it:
-small specs, bounded sprints, explicit QA passes, and durable project memory
-stored in files instead of chat history.
+It presents major handheld systems as cultural artifacts, using a structured
+orchestration process to keep design, content, and implementation aligned over
+time.
 
 ## What This Project Is
 
 - a static web museum built with HTML, CSS, JavaScript, and local SVG assets
 - a Swiss-style digital exhibit focused on handheld systems as historical artifacts
-- a Digital Curator homepage that adapts the user-supplied `stitch.zip` design
-  language into a museum-specific experience
+- a premium editorial homepage organized as a chronological museum route
 - a repository that treats AI as an implementation assistant, not as the system of record
 
 ## Current State
 
-The current public slice is a Digital Curator chronology hall homepage with:
+The current public slice is a chronology-hall homepage with:
 
 - a glass navigation bar with active room tracking
 - a guided museum-style foyer and opening sequence
 - six chronological exhibit rooms from Origins through Modern Era
 - seven major handheld milestones from Game Boy to Switch
-- Apple-style spotlight copy written in museum language
+- premium spotlight copy written in museum language
 - scarcity framing written as preservation context
 - tonal surfaces, asymmetrical pacing, and local device silhouettes
 
@@ -33,6 +32,66 @@ The current workstreams and their status live in
 For the complete project map, read
 [`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md).
 
+## Design Direction
+
+The site is designed around a Swiss visual system:
+
+- strong hierarchy
+- disciplined grid structure
+- restrained spacing
+- clean typography
+- high-contrast focal moments
+
+The presentation style borrows from premium product storytelling, but the tone
+stays museum-like. The devices are treated as artifacts to be interpreted, not
+products to be sold.
+
+## Brand Direction
+
+The project uses the Explorer archetype.
+
+That means the experience should feel like a guided discovery through handheld
+history. The visitor is invited to move forward through time, compare design
+shifts, and uncover why certain devices changed portable play.
+
+## Persuasion Strategy
+
+The primary persuasion method is scarcity.
+
+Scarcity is used here as curatorial context rather than sales pressure. The
+copy emphasizes:
+
+- aging hardware
+- disappearing media
+- fragile packaging and accessories
+- the difficulty of finding complete surviving examples
+
+This supports the museum goal by making preservation feel meaningful.
+
+## Orchestration Process
+
+Major work in this repository follows a spec-driven orchestration process:
+
+`spec -> QA -> sprint -> QA -> implement -> QA`
+
+Each stage has a specific role:
+
+1. `spec`
+   Define a bounded goal, constraints, required outputs, and testing shape.
+2. `QA`
+   Review the spec for drift, ambiguity, and conflicts with the museum vision.
+3. `sprint`
+   Translate the approved spec into a focused implementation plan.
+4. `QA`
+   Review the sprint plan before code changes begin.
+5. `implement`
+   Apply the change in code and content.
+6. `QA`
+   Run a final implementation review with both technical and curator criteria.
+
+This process exists to keep the site coherent as it grows. It prevents large,
+unguided rewrites and keeps durable project reasoning inside the repository.
+
 ## Start Here
 
 Read these in order:
@@ -41,15 +100,6 @@ Read these in order:
 2. [`docs/foundation/student-reading-guide.md`](docs/foundation/student-reading-guide.md)
 3. [`docs/foundation/orchestration-method.md`](docs/foundation/orchestration-method.md)
 4. [`docs/_specs/README.md`](docs/_specs/README.md)
-
-## Workflow
-
-For foundational work, this project uses:
-
-`spec -> QA -> sprint -> QA -> implement -> QA`
-
-This is mandatory for changes that shape the site, the documentation system, or
-the long-term design language.
 
 For narrow fixes, use the lighter process in
 [`docs/foundation/lightweight-change-path.md`](docs/foundation/lightweight-change-path.md).
@@ -83,7 +133,7 @@ The current verification model is documented in
 │   ├── content/            # content architecture and exhibit packages
 │   └── templates/          # reusable planning templates
 ├── PROJECT_OVERVIEW.md     # full repository overview and current-state map
-├── index.html              # Digital Curator chronology hall homepage
+├── index.html              # chronology hall homepage
 ├── styles.css              # visual system, typography, surfaces, device silhouettes
 ├── script.js               # guided route interaction and room status updates
 ├── package.json            # local quality scripts

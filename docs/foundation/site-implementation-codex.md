@@ -10,7 +10,7 @@ making changes.
 
 ## Current File Map
 
-- `index.html` — current Digital Curator chronology hall page
+- `index.html` — current chronology hall page
 - `styles.css` — tokens, local typography, tonal surfaces, device silhouettes,
   responsiveness
 - `script.js` — guided-route interaction and live room-status updates
@@ -52,7 +52,7 @@ The hero acts as the entrance foyer.
 
 It contains:
 
-- the Digital Curator exhibition label
+- the permanent exhibition label
 - the framing statement
 - the primary route entry
 - the curatorial note
@@ -166,7 +166,7 @@ visual and narrative product.
 - a stable reading sequence
 - restrained visual language
 - content that reads like placards and spotlight notes
-- the Digital Curator surface grammar of glass topbar, tonal panels, and large
+- the current surface grammar of glass topbar, tonal panels, and large
   editorial headlines
 - explicit process artifacts for future expansions
 
