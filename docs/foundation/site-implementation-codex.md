@@ -10,70 +10,68 @@ making changes.
 
 ## Current File Map
 
-- `index.html` — current chronology-hall page and spotlight sequence
-- `styles.css` — tokens, grid, typography, panels, responsiveness
-- `script.js` — guided-route interaction
-- `assets/` — local exhibit imagery
+- `index.html` — current Digital Curator chronology hall page
+- `styles.css` — tokens, local typography, tonal surfaces, device silhouettes,
+  responsiveness
+- `script.js` — guided-route interaction and live room-status updates
+- `assets/` — local exhibit imagery and font assets
+- `PROJECT_OVERVIEW.md` — current-state summary for the whole repository
 - `docs/foundation/` — durable process and design docs
 - `docs/_specs/` — workstream planning and QA artifacts
 - `docs/content/` — content architecture and exhibit packages
 
 ## Page Structure
 
-The current page is one chronology hall with eight major surfaces:
+The current page is one chronology hall with nine major surfaces:
 
-1. entrance hero
-2. guided route
+1. fixed topbar with route links and current-room status
+2. foyer hero
 3. Origins
 4. Color Evolution
 5. Performance Expansion
 6. Multimedia Era
 7. Innovation Era
 8. Modern Era
+9. closing CTA room and footer
 
 That sequence is the current page grammar and should remain stable unless a
 spec changes it.
 
 ## Shell Composition
 
-### Header
+### Topbar
 
-The header establishes the exhibit index and museum metadata.
+The topbar establishes the exhibit index and live room status.
 
-It frames the page as a curated space before the hero copy begins.
+It uses a glass surface and stays fixed so the visitor can keep the chronology
+in view while moving through the page.
 
-### Hero
+### Foyer hero
 
-The hero acts as the entrance hall.
+The hero acts as the entrance foyer.
 
 It contains:
 
-- the museum title
+- the Digital Curator exhibition label
 - the framing statement
 - the primary route entry
-- the curatorial note panel
+- the curatorial note
+- the large stage panel with the Game Boy illustration
 
-### Route block
+### Chronology rooms
 
-The route block makes the guided experience explicit.
-
-It is not just decoration. It tells the visitor what phase of the museum they
-are currently in.
-
-### Exhibit rooms
-
-Each room contains one or more spotlight articles with:
+Each room contains one or more spotlight surfaces with:
 
 - a room heading and thesis
 - one-device-at-a-time focus
 - large display headline
 - minimal supporting copy
 - a scarcity line
-- a visual plaque rather than a dense card grid
+- a visual stage rather than a dense card grid
 
 ## CSS Architecture
 
-The current design system in `styles.css` has four layers:
+The current design system in `styles.css` has five layers:
 
 ### 1. Token layer
 
@@ -84,42 +82,63 @@ The `:root` block holds shared values for:
 - shadow
 - maximum width
 
-### 2. Layout layer
+### 2. Typography layer
+
+The page now ships its own local Inter variable fonts through `@font-face`
+rules at the top of the file.
+
+### 3. Layout layer
 
 The core layout classes are:
 
-- `.page-shell`
-- `.museum-grid`
-- `.panel`
+- `.shell`
+- `.topbar`
 - `.hero`
-- `.exhibit-room`
-- `.spotlight`
-- `.spotlight-visual`
+- `.room`
+- `.split-room`
+- `.performance-layout`
+- `.modern-grid`
 
-### 3. Component layer
+### 4. Component layer
 
 Shared component-like patterns include:
 
-- `.section-heading`
-- `.route-step`
-- `.room-intro`
-- `.spotlight-headline`
+- `.route-link`
+- `.stage-panel`
+- `.artifact-stage`
+- `.mini-stage`
+- `.statement-card`
+- `.inset-card`
 - `.spotlight-highlight`
 - `.spotlight-scarcity`
-- `.visual-plaque`
+- `.stage-tags`
 
-### 4. Responsive layer
+### 5. Responsive and motion layer
 
 The media queries collapse multi-column grids into single-column flows on
-smaller screens while preserving reading order.
+smaller screens while preserving reading order, and `prefers-reduced-motion`
+removes forced smooth scrolling for visitors who opt out of motion.
+
+## Artifact Rendering
+
+The current page uses two artifact strategies:
+
+- the hero uses the local `assets/game-boy-dmg.svg` illustration
+- later rooms use CSS-built silhouette objects under `.device--*` classes
+
+Those silhouettes are presentation helpers, not canonical archival assets. If
+future sprints add photography or richer illustration packages, they should
+replace these shapes through a spec rather than through ad hoc swaps.
 
 ## Interaction Model
 
 `script.js` manages a small but important behavior layer:
 
-- route buttons scroll visitors to the intended section
+- route links scroll visitors to the intended section
 - active route state updates as sections enter view
-- the status text makes progression legible
+- the status text makes progression legible through the fixed topbar
+- the current section is derived from `IntersectionObserver` on `[data-stage]`
+  sections
 
 This is the current guided-route model. Keep it simple unless a later sprint
 justifies more complex interaction.
@@ -147,6 +166,8 @@ visual and narrative product.
 - a stable reading sequence
 - restrained visual language
 - content that reads like placards and spotlight notes
+- the Digital Curator surface grammar of glass topbar, tonal panels, and large
+  editorial headlines
 - explicit process artifacts for future expansions
 
 ## What Can Change Later

@@ -6,439 +6,408 @@
     <title>Retro Handheld Gaming Museum</title>
     <meta
       name="description"
-      content="A museum-style chronology hall presenting the major milestones of handheld gaming as curated artifacts."
+      content="A Digital Curator-style chronology hall presenting the major milestones of handheld gaming as museum artifacts."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <p class="site-index">Exhibit 01 / Chronology Hall</p>
-        <div class="site-meta" aria-label="Museum metadata">
-          <p>Collection span: 1989-2017</p>
-          <p>Focus: Major handheld milestones</p>
-        </div>
-      </header>
+    <header class="topbar">
+      <div class="topbar-shell">
+        <a class="brand" href="#hero">
+          <span class="brand-mark" aria-hidden="true"></span>
+          Retro Handheld Museum
+        </a>
 
-      <main class="museum-grid">
-        <section class="panel hero" id="foyer" data-stage="foyer">
-          <div class="hero-copy">
-            <p class="eyebrow">Retro Handheld Gaming Museum</p>
-            <h1>Seven milestones. One portable journey.</h1>
-            <p class="lede">
-              Explore the chronology hall as a sequence of preserved handheld
-              artifacts, from monochrome endurance to hybrid flexibility. Each
-              room isolates one decisive shift in how games were carried,
-              discovered, and remembered.
-            </p>
-            <a class="button-link" href="#origins">Enter the chronology hall</a>
-          </div>
-
-          <aside class="visit-note" aria-label="Curatorial note">
-            <p class="note-label">Curatorial note</p>
-            <p class="note-copy">
-              This route favors landmark devices over completeness. The goal is
-              to study the objects that changed the portable journey, not to
-              flood the visitor with every branch of the market.
-            </p>
-            <dl class="note-facts">
-              <div>
-                <dt>Status</dt>
-                <dd>Major handhelds only</dd>
-              </div>
-              <div>
-                <dt>Reading lens</dt>
-                <dd>Museum before marketing</dd>
-              </div>
-              <div>
-                <dt>Visitor mode</dt>
-                <dd>Chronological, room by room</dd>
-              </div>
-            </dl>
-          </aside>
-        </section>
-
-        <section class="panel route" id="route">
-          <div class="section-heading">
-            <p class="eyebrow">Guided route</p>
-            <h2>Move through the chronology in sequence.</h2>
-          </div>
-
-          <div
-            class="route-grid"
-            role="navigation"
-            aria-label="Chronology route"
+        <nav class="topnav" aria-label="Primary exhibit navigation">
+          <a class="route-link is-active" href="#hero" data-target="hero"
+            >Foyer</a
           >
-            <button
-              class="route-step is-active"
-              data-target="foyer"
-              type="button"
-            >
-              01 Foyer
-            </button>
-            <button class="route-step" data-target="origins" type="button">
-              02 Origins
-            </button>
-            <button
-              class="route-step"
-              data-target="color-evolution"
-              type="button"
-            >
-              03 Color
-            </button>
-            <button
-              class="route-step"
-              data-target="performance-expansion"
-              type="button"
-            >
-              04 Performance
-            </button>
-            <button
-              class="route-step"
-              data-target="multimedia-era"
-              type="button"
-            >
-              05 Multimedia
-            </button>
-            <button
-              class="route-step"
-              data-target="innovation-era"
-              type="button"
-            >
-              06 Innovation
-            </button>
-            <button class="route-step" data-target="modern-era" type="button">
-              07 Modern
-            </button>
-          </div>
+          <a class="route-link" href="#origins" data-target="origins"
+            >Origins</a
+          >
+          <a class="route-link" href="#color" data-target="color">Color</a>
+          <a class="route-link" href="#performance" data-target="performance"
+            >Performance</a
+          >
+          <a class="route-link" href="#multimedia" data-target="multimedia"
+            >Multimedia</a
+          >
+          <a class="route-link" href="#innovation" data-target="innovation"
+            >Innovation</a
+          >
+          <a class="route-link" href="#modern" data-target="modern">Modern</a>
+        </nav>
 
-          <p class="route-status" data-route-status>
-            Now viewing: Entrance Hall
-          </p>
-        </section>
+        <div class="topbar-status">
+          <span class="meta-label">Now viewing</span>
+          <span class="status-value" data-route-status>Foyer</span>
+        </div>
+      </div>
+    </header>
 
-        <section
-          class="panel exhibit-room room--origins"
-          id="origins"
-          data-stage="origins"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 01 / Origins</p>
-            <h2>Origins</h2>
-            <p class="room-thesis">
-              The journey begins with endurance, restraint, and the object that
-              made portable play ordinary.
-            </p>
-          </div>
-
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Nintendo Game Boy / 1989</p>
-              <h3 class="spotlight-headline">Portable, defined.</h3>
-              <p class="spotlight-subheadline">
-                Discover the gray artifact that turned gaming into a journey you
-                could carry.
+    <main>
+      <section class="hero" id="hero" data-stage="hero">
+        <div class="shell">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="meta-label meta-label--accent">
+                The Digital Curator / Exhibition 01
               </p>
-              <p class="spotlight-highlight">
-                <span>Key highlight</span>
-                Long battery life made handheld play truly everyday.
-              </p>
-              <p class="spotlight-description">
-                Its monochrome screen and durable body made portability
-                practical, not experimental. This is the object that moved games
-                from the living room into daily life.
-              </p>
-              <p class="spotlight-scarcity">
-                <span>Scarcity</span>
-                Clean screens, intact battery contacts, and preserved early
-                cartridges are increasingly harder to discover in the archive.
+              <h1>TACTILE<br />HISTORY.</h1>
+              <p class="hero-summary">
+                A curated journey through the handheld devices that turned
+                gaming into a personal object. Discover the milestones that
+                moved play from monochrome endurance to hybrid freedom.
               </p>
             </div>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">1989</p>
-              <div class="visual-plaque visual-plaque--portrait"></div>
-              <p class="spotlight-plate-label">Nintendo Game Boy</p>
-              <p class="spotlight-caption">Monochrome endurance</p>
+            <div class="hero-support">
+              <p class="hero-note">
+                Swiss order. Museum restraint. Apple-style focus. The object
+                stays central, while the interface recedes into tonal surfaces,
+                glass layers, and editorial pacing.
+              </p>
+              <a class="hero-cta" href="#origins">Explore the chronology</a>
             </div>
-          </article>
-        </section>
+          </div>
+        </div>
 
-        <section
-          class="panel exhibit-room room--color"
-          id="color-evolution"
-          data-stage="color-evolution"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 02 / Color Evolution</p>
-            <h2>Color Evolution</h2>
-            <p class="room-thesis">
-              Portable screens brighten, but the museum's focus stays on
-              continuity rather than novelty.
+        <div class="hero-stage">
+          <div class="shell">
+            <div class="stage-panel">
+              <p class="stage-year">1989</p>
+              <img
+                class="hero-image"
+                src="assets/game-boy-dmg.svg"
+                alt="Illustrated Nintendo Game Boy DMG-01 presented as a museum artifact"
+              />
+              <div class="stage-tags" aria-label="Artifact metadata">
+                <span>Artifact: Game Boy</span>
+                <span>Room: Origins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="room room--low" id="origins" data-stage="origins">
+        <div class="shell split-room">
+          <div class="visual-cell">
+            <div class="artifact-stage">
+              <p class="artifact-year">1989</p>
+              <div class="device device--dmg" aria-hidden="true"></div>
+              <p class="artifact-caption">
+                Nintendo Game Boy / monochrome endurance
+              </p>
+            </div>
+          </div>
+
+          <div class="copy-cell">
+            <p class="meta-label meta-label--accent">Room 01 / Origins</p>
+            <p class="artifact-name">Nintendo Game Boy</p>
+            <h2>Portable, defined.</h2>
+            <p class="subheadline">
+              Discover the gray artifact that turned gaming into a journey you
+              could carry.
+            </p>
+            <p class="highlight-line">
+              <span>Key highlight</span>
+              Long battery life made handheld play truly everyday.
+            </p>
+            <p class="description">
+              Its monochrome screen and durable body made portability practical,
+              not experimental. This is the object that moved games from the
+              living room into daily life.
+            </p>
+            <p class="scarcity-line">
+              <span>Scarcity</span>
+              Clean screens, intact battery contacts, and preserved early
+              cartridges are increasingly harder to discover in the archive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="room room--surface" id="color" data-stage="color">
+        <div class="shell room-center">
+          <p class="meta-label meta-label--accent">Room 02 / Color Evolution</p>
+          <div class="center-intro">
+            <p class="artifact-name">Game Boy Color</p>
+            <h2>Color, carried.</h2>
+            <p class="subheadline">
+              Explore the moment handheld worlds stepped out of green haze and
+              into a brighter journey.
             </p>
           </div>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Game Boy Color / 1998</p>
-              <h3 class="spotlight-headline">Color, carried.</h3>
-              <p class="spotlight-subheadline">
-                Explore the moment handheld worlds stepped out of green haze and
-                into a brighter journey.
-              </p>
-              <p class="spotlight-highlight">
+          <div class="color-grid">
+            <article class="mini-stage">
+              <div class="device device--gbc" aria-hidden="true"></div>
+              <p class="artifact-caption">1998 / translucent color shell</p>
+            </article>
+
+            <article class="statement-card">
+              <p class="highlight-line">
                 <span>Key highlight</span>
                 Full color refreshed a classic form without losing portability.
               </p>
-              <p class="spotlight-description">
+              <p class="description">
                 It kept the Game Boy line familiar while making game worlds feel
                 more immediate and alive. This room marks the shift from
                 endurance alone to visual expression.
               </p>
-              <p class="spotlight-scarcity">
+              <p class="scarcity-line">
                 <span>Scarcity</span>
                 Fading translucent shells, battery corrosion, and disappearing
                 boxed units make strong survivors rarer every year.
               </p>
-            </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">1998</p>
-              <div class="visual-plaque visual-plaque--portrait"></div>
-              <p class="spotlight-plate-label">Game Boy Color</p>
-              <p class="spotlight-caption">Transparent color</p>
-            </div>
-          </article>
-        </section>
-
-        <section
-          class="panel exhibit-room room--performance"
-          id="performance-expansion"
-          data-stage="performance-expansion"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 03 / Performance Expansion</p>
-            <h2>Performance Expansion</h2>
-            <p class="room-thesis">
-              Handheld design widens, speeds up, and starts chasing
-              console-scale ambition.
+      <section
+        class="room room--high"
+        id="performance"
+        data-stage="performance"
+      >
+        <div class="shell performance-layout">
+          <div class="performance-copy">
+            <p class="meta-label meta-label--accent">
+              Room 03 / Performance Expansion
+            </p>
+            <p class="artifact-name">Game Boy Advance</p>
+            <h2>Power, widened.</h2>
+            <p class="subheadline">
+              Continue the journey into a slimmer handheld built for broader
+              ambition.
             </p>
           </div>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Game Boy Advance / 2001</p>
-              <h3 class="spotlight-headline">Power, widened.</h3>
-              <p class="spotlight-subheadline">
-                Continue the journey into a slimmer handheld built for broader
-                ambition.
-              </p>
-              <p class="spotlight-highlight">
-                <span>Key highlight</span>
-                32-bit performance brought console-scale design into the palm.
-              </p>
-              <p class="spotlight-description">
-                The horizontal form and stronger hardware expanded what portable
-                games could look and feel like. It stands as the point where
-                handheld design became sharper, faster, and more assured.
-              </p>
-              <p class="spotlight-scarcity">
-                <span>Scarcity</span>
-                Bright original screens, uncracked shells, and preserved
-                cartridge libraries are harder to explore intact now.
-              </p>
-            </div>
+          <p class="section-note">
+            The landscape orientation marks the shift from toy-like portability
+            to a more deliberate piece of personal technology.
+          </p>
+        </div>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">2001</p>
-              <div class="visual-plaque visual-plaque--landscape"></div>
-              <p class="spotlight-plate-label">Game Boy Advance</p>
-              <p class="spotlight-caption">32-bit breadth</p>
-            </div>
-          </article>
-        </section>
-
-        <section
-          class="panel exhibit-room room--multimedia"
-          id="multimedia-era"
-          data-stage="multimedia-era"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 04 / Multimedia Era</p>
-            <h2>Multimedia Era</h2>
-            <p class="room-thesis">
-              Portable gaming reaches toward a broader media identity and a more
-              polished consumer-electronics language.
-            </p>
+        <div class="shell data-stage-panel">
+          <div class="primary-panel">
+            <div class="device device--gba" aria-hidden="true"></div>
           </div>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">PlayStation Portable / 2004</p>
-              <h3 class="spotlight-headline">Media, in motion.</h3>
-              <p class="spotlight-subheadline">
-                Discover a handheld that invited visitors to explore games,
-                music, and film through one polished object.
-              </p>
-              <p class="spotlight-highlight">
-                <span>Key highlight</span>
-                A widescreen display made handheld entertainment feel cinematic.
-              </p>
-              <p class="spotlight-description">
-                The PSP pushed portability toward multimedia luxury, with a form
-                closer to premium electronics than toys. In museum terms, it
-                captures the moment handhelds chased a broader media identity.
-              </p>
-              <p class="spotlight-scarcity">
-                <span>Scarcity</span>
-                Scratched screens, fragile disc drives, and vanishing UMD media
-                make well-kept systems increasingly scarce.
-              </p>
-            </div>
-
-            <div class="spotlight-visual">
-              <p class="spotlight-year">2004</p>
-              <div class="visual-plaque visual-plaque--landscape"></div>
-              <p class="spotlight-plate-label">PlayStation Portable</p>
-              <p class="spotlight-caption">Cinematic portable media</p>
-            </div>
-          </article>
-        </section>
-
-        <section
-          class="panel exhibit-room room--innovation"
-          id="innovation-era"
-          data-stage="innovation-era"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 05 / Innovation Era</p>
-            <h2>Innovation Era</h2>
-            <p class="room-thesis">
-              Interfaces and depth reshape how visitors explore portable space.
+          <div class="secondary-panel">
+            <p class="artifact-year artifact-year--inline">2001</p>
+            <p class="highlight-line">
+              <span>Key highlight</span>
+              32-bit performance brought console-scale design into the palm.
+            </p>
+            <p class="description">
+              The horizontal form and stronger hardware expanded what portable
+              games could look and feel like. It stands as the point where
+              handheld design became sharper, faster, and more assured.
+            </p>
+            <p class="scarcity-line">
+              <span>Scarcity</span>
+              Bright original screens, uncracked shells, and preserved cartridge
+              libraries are harder to explore intact now.
             </p>
           </div>
+        </div>
+      </section>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Nintendo DS / 2004</p>
-              <h3 class="spotlight-headline">Touch changes everything.</h3>
-              <p class="spotlight-subheadline">
-                Explore the handheld that split the screen and reopened the
-                journey through play.
-              </p>
-              <p class="spotlight-highlight">
-                <span>Key highlight</span>
-                Dual screens and touch control changed how portable games were
-                imagined.
-              </p>
-              <p class="spotlight-description">
-                The DS broke the familiar handheld template and made interaction
-                itself the exhibit. It opened a new design path through touch,
-                asymmetry, and experimentation.
-              </p>
-              <p class="spotlight-scarcity">
-                <span>Scarcity</span>
-                Intact hinges, original styluses, and preserved dual-screen
-                hardware are steadily disappearing from the archive.
+      <section
+        class="room room--surface"
+        id="multimedia"
+        data-stage="multimedia"
+      >
+        <div class="shell room-head">
+          <div>
+            <p class="meta-label meta-label--accent">
+              Room 04 / Multimedia Era
+            </p>
+            <p class="artifact-name">PlayStation Portable</p>
+            <h2>Media, in motion.</h2>
+          </div>
+
+          <p class="section-note">
+            Sony recast the handheld as a polished media object, making the
+            portable journey feel cinematic and aspirational.
+          </p>
+        </div>
+
+        <div class="feature-band">
+          <div class="shell">
+            <div class="wide-stage">
+              <div class="device device--psp" aria-hidden="true"></div>
+              <div class="stage-tags">
+                <span>Model: PSP-1000</span>
+                <span>Display: Widescreen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell band-copy">
+          <p class="subheadline">
+            Discover a handheld that invited visitors to explore games, music,
+            and film through one polished object.
+          </p>
+          <p class="highlight-line">
+            <span>Key highlight</span>
+            A widescreen display made handheld entertainment feel cinematic.
+          </p>
+          <p class="description">
+            The PSP pushed portability toward multimedia luxury, with a form
+            closer to premium electronics than toys. In museum terms, it
+            captures the moment handhelds chased a broader media identity.
+          </p>
+          <p class="scarcity-line">
+            <span>Scarcity</span>
+            Scratched screens, fragile disc drives, and vanishing UMD media make
+            well-kept systems increasingly scarce.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="room room--surface"
+        id="innovation"
+        data-stage="innovation"
+      >
+        <div class="shell innovation-layout">
+          <div class="innovation-visual">
+            <div class="artifact-stage artifact-stage--tall">
+              <div class="device device--ds" aria-hidden="true"></div>
+              <p class="artifact-caption">
+                Nintendo DS / dual-screen curiosity
               </p>
             </div>
+          </div>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">2004</p>
-              <div class="visual-plaque visual-plaque--clamshell"></div>
-              <p class="spotlight-plate-label">Nintendo DS</p>
-              <p class="spotlight-caption">Dual-screen curiosity</p>
-            </div>
-          </article>
+          <div class="innovation-copy">
+            <p class="meta-label meta-label--accent">
+              Room 05 / Innovation Era
+            </p>
+            <p class="artifact-name">Nintendo DS</p>
+            <h2>Touch changes everything.</h2>
+            <p class="subheadline">
+              Explore the handheld that split the screen and reopened the
+              journey through play.
+            </p>
+            <p class="highlight-line">
+              <span>Key highlight</span>
+              Dual screens and touch control changed how portable games were
+              imagined.
+            </p>
+            <p class="description">
+              The DS broke the familiar handheld template and made interaction
+              itself the exhibit. It opened a new design path through touch,
+              asymmetry, and experimentation.
+            </p>
+            <p class="scarcity-line">
+              <span>Scarcity</span>
+              Intact hinges, original styluses, and preserved dual-screen
+              hardware are steadily disappearing from the archive.
+            </p>
+          </div>
+        </div>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Nintendo 3DS / 2011</p>
-              <h3 class="spotlight-headline">Depth, revealed.</h3>
-              <p class="spotlight-subheadline">
+        <div class="shell secondary-feature">
+          <article class="inset-card">
+            <div class="inset-copy">
+              <p class="meta-label">2011 / Nintendo 3DS</p>
+              <h3>Depth, revealed.</h3>
+              <p class="subheadline">
                 Journey into a device that asked players to discover portable
                 space without glasses.
               </p>
-              <p class="spotlight-highlight">
+              <p class="highlight-line">
                 <span>Key highlight</span>
                 Glasses-free 3D made depth part of the handheld experience.
               </p>
-              <p class="spotlight-description">
+              <p class="description">
                 The 3DS extended Nintendo's experimental line with spatial
                 display, cameras, and a stronger digital identity. It represents
                 a bold attempt to make handheld play feel dimensional and new
                 again.
               </p>
-              <p class="spotlight-scarcity">
+              <p class="scarcity-line">
                 <span>Scarcity</span>
                 Aging batteries, worn circle pads, and delisted digital history
                 make complete surviving systems more limited over time.
               </p>
             </div>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">2011</p>
-              <div class="visual-plaque visual-plaque--clamshell"></div>
-              <p class="spotlight-plate-label">Nintendo 3DS</p>
-              <p class="spotlight-caption">Glasses-free depth</p>
+            <div class="mini-stage mini-stage--dark">
+              <div class="device device--3ds" aria-hidden="true"></div>
             </div>
           </article>
-        </section>
+        </div>
+      </section>
 
-        <section
-          class="panel exhibit-room room--modern"
-          id="modern-era"
-          data-stage="modern-era"
-        >
-          <div class="room-intro">
-            <p class="eyebrow">Room 06 / Modern Era</p>
-            <h2>Modern Era</h2>
-            <p class="room-thesis">
-              The border between handheld and home dissolves into one flexible
-              system.
+      <section class="room room--inverse" id="modern" data-stage="modern">
+        <div class="shell modern-grid">
+          <div class="modern-copy">
+            <p class="meta-label meta-label--inverse">Room 06 / Modern Era</p>
+            <p class="artifact-name artifact-name--inverse">Nintendo Switch</p>
+            <h2>The hybrid future.</h2>
+            <p class="subheadline">
+              Explore the device that turned the journey between handheld and
+              home into one continuous motion.
+            </p>
+            <p class="highlight-line highlight-line--inverse">
+              <span>Key highlight</span>
+              Dock-to-hand play redefined what portability could mean.
+            </p>
+            <p class="description description--inverse">
+              The Switch collapsed the old divide between portable system and
+              living-room console. As an exhibit, it marks the modern moment
+              when flexibility became the central design idea.
+            </p>
+            <p class="scarcity-line scarcity-line--inverse">
+              <span>Scarcity</span>
+              Early launch units, intact Joy-Con hardware, and limited physical
+              editions are already becoming the harder pieces of the modern
+              archive.
             </p>
           </div>
 
-          <article class="spotlight">
-            <div class="spotlight-copy">
-              <p class="spotlight-device">Nintendo Switch / 2017</p>
-              <h3 class="spotlight-headline">One system. Anywhere.</h3>
-              <p class="spotlight-subheadline">
-                Explore the device that turned the journey between handheld and
-                home into one continuous motion.
-              </p>
-              <p class="spotlight-highlight">
-                <span>Key highlight</span>
-                Dock-to-hand play redefined what portability could mean.
-              </p>
-              <p class="spotlight-description">
-                The Switch collapsed the old divide between portable system and
-                living-room console. As an exhibit, it marks the modern moment
-                when flexibility became the central design idea.
-              </p>
-              <p class="spotlight-scarcity">
-                <span>Scarcity</span>
-                Early launch units, intact Joy-Con hardware, and limited
-                physical editions are already becoming the harder pieces of the
-                modern archive.
-              </p>
-            </div>
+          <div class="modern-visual">
+            <div class="device device--switch" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
 
-            <div class="spotlight-visual">
-              <p class="spotlight-year">2017</p>
-              <div class="visual-plaque visual-plaque--hybrid"></div>
-              <p class="spotlight-plate-label">Nintendo Switch</p>
-              <p class="spotlight-caption">Dock and depart</p>
-            </div>
-          </article>
-        </section>
-      </main>
+      <section class="cta-room">
+        <div class="shell cta-shell">
+          <p class="meta-label">Next movement</p>
+          <h2 class="cta-title">The collection continues.</h2>
+          <p class="cta-note">
+            The current chronology isolates the major milestones. Future rooms
+            will explore preservation, regional variants, and the systems that
+            became rare at the edges of the archive.
+          </p>
+          <a class="cta-link" href="#hero">Return to the foyer</a>
+        </div>
+      </section>
+    </main>
 
-      <footer class="site-footer">
-        <p>Retro Handheld Gaming Museum</p>
-        <p>Chronology hall: seven major handheld milestones</p>
-      </footer>
-    </div>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <p class="footer-brand">Retro Handheld Museum</p>
+          <p class="footer-copy">
+            Preserving portable play as a tactile, historical, and designed
+            experience.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#origins">Origins</a>
+          <a href="#innovation">Innovation</a>
+          <a href="#modern">Modern Era</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

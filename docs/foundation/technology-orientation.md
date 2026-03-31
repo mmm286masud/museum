@@ -15,9 +15,11 @@ framework than it does.
 
 It defines:
 
-- the entrance hall structure
+- the fixed topbar and room-status surface
+- the entrance foyer structure
 - the chronology-hall route
 - the spotlight sections for the major handheld devices
+- the closing CTA and footer sequence
 - the semantic reading order for the exhibit
 
 ### CSS
@@ -27,8 +29,11 @@ It defines:
 It contains:
 
 - the Swiss-style grid
+- local Inter variable font loading
 - typography choices
 - spacing and color tokens
+- tonal surface hierarchy and glass navigation
+- CSS-built device silhouettes for the chronology rooms
 - responsive behavior
 - restrained motion
 
@@ -38,17 +43,20 @@ It contains:
 
 It currently handles:
 
-- route-step activation
+- route-link activation
 - scroll-to-section interactions
 - status updates based on section visibility
 
-### SVG assets
+### Local assets
 
-Local image assets live in `assets/`.
+Local assets live in `assets/`.
 
-A local SVG illustration of the Game Boy DMG-01 is already stored there for
-future exhibit use. Keeping assets local keeps the current build simple and
-predictable.
+They currently include:
+
+- a local SVG illustration of the Game Boy DMG-01
+- local Inter font files under `assets/fonts/`
+
+Keeping these assets local keeps the current build simple and predictable.
 
 ### npm and Prettier
 
@@ -70,7 +78,7 @@ This is not a full test stack yet. It is the current minimum quality gate.
 - HTML5
 - CSS3
 - vanilla JavaScript
-- SVG assets
+- local SVG and font assets
 - npm
 - Prettier
 

@@ -15,6 +15,10 @@ The next expansion must add the most historically significant handheld devices
 as a clear exhibit flow, while keeping the writing minimal, visually led, and
 museum-focused rather than commercial.
 
+The next refinement after the chronology hall must apply the user-supplied
+Digital Curator design system so the homepage reads like a premium editorial
+museum surface rather than a generic static site.
+
 ## Design Goals
 
 1. Make the homepage feel like an entrance hall
@@ -23,6 +27,8 @@ museum-focused rather than commercial.
 4. Express scarcity as preservation context
 5. Preserve Swiss grid discipline and strong typography
 6. Keep the route visually clear from Origins through the Modern Era
+7. Apply the approved Digital Curator design language with tonal surfaces,
+   glass navigation, and asymmetrical editorial pacing
 
 ## Architecture
 
@@ -60,6 +66,20 @@ The homepage chronology must include these devices:
 
 The PlayStation Vita may appear later, but it is not required for this sprint.
 
+### Approved design source
+
+The repository may use the user-supplied `stitch.zip` design archive as a
+reference source for:
+
+- typography rhythm
+- surface hierarchy
+- glass navigation
+- asymmetrical editorial composition
+- hero and footer pacing
+
+The implementation must adapt that design to the museum's live content instead
+of copying external placeholder brands, image URLs, or unrelated sections.
+
 ### Required exhibit fields
 
 Every complete spotlight presentation must include:
@@ -88,6 +108,7 @@ Validation for each sprint in this workstream should include:
 3. curator review against narrative flow and educational value
 4. repository format check
 5. required-device coverage in the homepage markup and content docs
+6. consistency against the approved design source
 
 ## Sprint Plan
 
@@ -95,8 +116,9 @@ Validation for each sprint in this workstream should include:
 | -------- | ------------------------------------------------------------------------------------------------ |
 | Sprint 0 | Build the entrance hall homepage and the first complete artifact section                         |
 | Sprint 1 | Expand the homepage into a full chronology hall with the required major handheld devices         |
-| Sprint 2 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
-| Sprint 3 | Run a cross-page curator QA pass                                                                 |
+| Sprint 2 | Apply the Digital Curator design system from the supplied design archive to the chronology hall  |
+| Sprint 3 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
+| Sprint 4 | Run a cross-page curator QA pass                                                                 |
 
 ## Future Considerations
 

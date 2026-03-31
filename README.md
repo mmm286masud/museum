@@ -11,20 +11,27 @@ stored in files instead of chat history.
 
 - a static web museum built with HTML, CSS, JavaScript, and local SVG assets
 - a Swiss-style digital exhibit focused on handheld systems as historical artifacts
+- a Digital Curator homepage that adapts the user-supplied `stitch.zip` design
+  language into a museum-specific experience
 - a repository that treats AI as an implementation assistant, not as the system of record
 
 ## Current State
 
-The current public slice is a chronology-hall homepage with:
+The current public slice is a Digital Curator chronology hall homepage with:
 
-- a guided museum-style opening sequence
+- a glass navigation bar with active room tracking
+- a guided museum-style foyer and opening sequence
 - six chronological exhibit rooms from Origins through Modern Era
 - seven major handheld milestones from Game Boy to Switch
 - Apple-style spotlight copy written in museum language
 - scarcity framing written as preservation context
+- tonal surfaces, asymmetrical pacing, and local device silhouettes
 
 The current workstreams and their status live in
 [`docs/_specs/README.md`](docs/_specs/README.md).
+
+For the complete project map, read
+[`PROJECT_OVERVIEW.md`](PROJECT_OVERVIEW.md).
 
 ## Start Here
 
@@ -69,15 +76,16 @@ The current verification model is documented in
 
 ```text
 .
-├── assets/                 # local exhibit imagery
+├── assets/                 # local exhibit imagery and font assets
 ├── docs/
 │   ├── foundation/         # durable process and design reference docs
 │   ├── _specs/             # workstream specs, sprint docs, and QA artifacts
 │   ├── content/            # content architecture and exhibit packages
 │   └── templates/          # reusable planning templates
-├── index.html              # current chronology-hall homepage
-├── styles.css              # Swiss-style visual system and layout
-├── script.js               # guided route interaction
+├── PROJECT_OVERVIEW.md     # full repository overview and current-state map
+├── index.html              # Digital Curator chronology hall homepage
+├── styles.css              # visual system, typography, surfaces, device silhouettes
+├── script.js               # guided route interaction and room status updates
 ├── package.json            # local quality scripts
 └── AGENTS.md               # repository operating rules for future AI sessions
 ```

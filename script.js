@@ -1,43 +1,44 @@
-const routeButtons = document.querySelectorAll('[data-target]');
+const routeLinks = document.querySelectorAll('[data-target]');
 const routeStatus = document.querySelector('[data-route-status]');
 const observedSections = document.querySelectorAll('[data-stage]');
 
 const stageNames = {
-  foyer: 'Entrance Hall',
+  hero: 'Foyer',
   origins: 'Origins',
-  'color-evolution': 'Color Evolution',
-  'performance-expansion': 'Performance Expansion',
-  'multimedia-era': 'Multimedia Era',
-  'innovation-era': 'Innovation Era',
-  'modern-era': 'Modern Era',
+  color: 'Color Evolution',
+  performance: 'Performance Expansion',
+  multimedia: 'Multimedia Era',
+  innovation: 'Innovation Era',
+  modern: 'Modern Era',
 };
 
 function setActiveRoute(id) {
-  routeButtons.forEach((button) => {
-    const isActive = button.dataset.target === id;
-    button.classList.toggle('is-active', isActive);
-    button.setAttribute('aria-current', isActive ? 'true' : 'false');
+  routeLinks.forEach((link) => {
+    const isActive = link.dataset.target === id;
+    link.classList.toggle('is-active', isActive);
+    link.setAttribute('aria-current', isActive ? 'true' : 'false');
   });
 
   if (routeStatus && stageNames[id]) {
-    routeStatus.textContent = `Now viewing: ${stageNames[id]}`;
+    routeStatus.textContent = stageNames[id];
   }
 }
 
-routeButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const target = document.getElementById(button.dataset.target);
+routeLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.getElementById(link.dataset.target);
 
     if (!target) {
       return;
     }
 
+    event.preventDefault();
     target.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
 
-    setActiveRoute(button.dataset.target);
+    setActiveRoute(link.dataset.target);
   });
 });
 
@@ -52,7 +53,7 @@ const observer = new IntersectionObserver(
     }
   },
   {
-    threshold: [0.35, 0.55, 0.75],
+    threshold: [0.3, 0.55, 0.75],
   }
 );
 
