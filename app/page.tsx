@@ -1,5 +1,7 @@
 import { RouteTracker } from './route-tracker';
 
+const b = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export default function Home() {
   return (
     <>
@@ -90,7 +92,7 @@ export default function Home() {
 
               <div className="hero-character" aria-hidden="true">
                 <img
-                  src="/assets/img/hero-character.png"
+                  src={`${b}/assets/img/hero-character.png`}
                   alt=""
                   className="hero-character-img"
                 />
@@ -107,7 +109,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--portrait">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/Classic%20Nintendo%20Game%20Boy%20close-up.png"
+                    src={`${b}/assets/img/Classic%20Nintendo%20Game%20Boy%20close-up.png`}
                     alt="Close-up photo of the Nintendo Game Boy against a white background"
                     decoding="async"
                   />
@@ -168,7 +170,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--portrait">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/Red%20Game%20Boy%20Color%20close-up%20shot.png"
+                    src={`${b}/assets/img/Red%20Game%20Boy%20Color%20close-up%20shot.png`}
                     alt="Close-up photo of a red Game Boy Color on a white background"
                     decoding="async"
                   />
@@ -233,7 +235,7 @@ export default function Home() {
               <figure className="photo-frame photo-frame--shelf">
                 <img
                   className="artifact-photo"
-                  src="/assets/img/gameboyadvance.png"
+                  src={`${b}/assets/img/gameboyadvance.png`}
                   alt="Close-up photo of a Game Boy Advance on a transparent background"
                   decoding="async"
                 />
@@ -289,7 +291,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--wide">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/Sony%20PSP%20handheld%20close-up%20shot.png"
+                    src={`${b}/assets/img/Sony%20PSP%20handheld%20close-up%20shot.png`}
                     alt="Close-up photo of a Sony PSP handheld on a white background"
                     decoding="async"
                   />
@@ -340,7 +342,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--ds">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/nintendods.png"
+                    src={`${b}/assets/img/nintendods.png`}
                     alt="Museum render of an open Nintendo DS on a white studio background"
                     decoding="async"
                   />
@@ -415,7 +417,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--collection">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/nintendo3ds.png"
+                    src={`${b}/assets/img/nintendo3ds.png`}
                     alt="Museum render of an open Nintendo 3DS on a white studio background"
                     decoding="async"
                   />
@@ -436,7 +438,7 @@ export default function Home() {
                 <figure className="photo-frame photo-frame--portrait">
                   <img
                     className="artifact-photo"
-                    src="/assets/img/Blue%20Nintendo%202DS%20console%20close-up.png"
+                    src={`${b}/assets/img/Blue%20Nintendo%202DS%20console%20close-up.png`}
                     alt="Close-up photo of a blue Nintendo 2DS on a transparent background"
                     decoding="async"
                   />
@@ -518,7 +520,7 @@ export default function Home() {
               <figure className="photo-frame photo-frame--switch">
                 <img
                   className="artifact-photo"
-                  src="/assets/img/Nintendo%20Switch%20console%20close-up%20shot.png"
+                  src={`${b}/assets/img/Nintendo%20Switch%20console%20close-up%20shot.png`}
                   alt="Close-up photo of a Nintendo Switch on a white background"
                   decoding="async"
                 />
