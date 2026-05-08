@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f2f2f0"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(336.00000000000006 270) rotate(40) scale(960 1020.0000000000001)">
+      <stop stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#f1f1ef" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="plinthSide" x1="210" y1="1132" x2="990" y2="1270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7f7f5"/>
+      <stop offset="1" stop-color="#dfdfdb"/>
+    </linearGradient>
+    <linearGradient id="plinthTop" x1="210" y1="1132" x2="210" y2="1270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#efefec"/>
+    </linearGradient>
+    <filter id="shadowSoft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <filter id="shadowDevice" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="shadowHighlight" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <linearGradient id="gbcShell" x1="374" y1="272" x2="818" y2="1034" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6fd9d2"/>
+      <stop offset="1" stop-color="#3eb4af"/>
+    </linearGradient>
+    <linearGradient id="gbcScreen" x1="450" y1="370" x2="748" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d7ecff"/>
+      <stop offset="1" stop-color="#8ea4b8"/>
+    </linearGradient>
+  
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#spotlight)"/>
+  <ellipse cx="600" cy="1300" rx="327.59999999999997" ry="71.76" fill="#000000" fill-opacity="0.08" filter="url(#shadowSoft)"/>
+  <g filter="url(#shadowSoft)">
+    <rect x="210" y="1132" width="780" height="138" rx="30" fill="url(#plinthSide)"/>
+    <rect x="220" y="1140" width="760" height="118" rx="22" fill="url(#plinthTop)"/>
+  </g>
+  <g filter="url(#shadowDevice)">
+    
+    <g transform="translate(0 -8)">
+      <rect x="388" y="262" width="424" height="768" rx="74" fill="url(#gbcShell)"/>
+      <rect x="388" y="262" width="424" height="768" rx="74" fill="#ffffff" fill-opacity="0.16"/>
+      <rect x="446" y="344" width="308" height="274" rx="24" fill="#dff8f5" fill-opacity="0.22"/>
+      <rect x="478" y="380" width="244" height="176" rx="14" fill="url(#gbcScreen)"/>
+      
+    <rect x="474.24" y="728" width="39.52" height="104" rx="12.48" fill="#2f6d70"/>
+    <rect x="442" y="760.24" width="104" height="39.52" rx="12.48" fill="#2f6d70"/>
+  
+      <circle cx="664" cy="772" r="32" fill="#8b3c8c" />
+      <circle cx="728" cy="816" r="32" fill="#8b3c8c" />
+      <rect x="536" y="878" width="64" height="16" rx="8" fill="#2f6d70" fill-opacity="0.7"/>
+      <rect x="624" y="878" width="64" height="16" rx="8" fill="#2f6d70" fill-opacity="0.7"/>
+      <rect x="460" y="302" width="118" height="10" rx="5" fill="#ffffff" fill-opacity="0.28"/>
+      <rect x="586" y="320" width="154" height="10" rx="5" fill="#ffffff" fill-opacity="0.16"/>
+      <circle cx="470" cy="650" r="4" fill="#2f6d70" /><circle cx="514" cy="650" r="4" fill="#2f6d70" /><circle cx="558" cy="650" r="4" fill="#2f6d70" /><circle cx="602" cy="650" r="4" fill="#2f6d70" /><circle cx="646" cy="650" r="4" fill="#2f6d70" /><circle cx="690" cy="650" r="4" fill="#2f6d70" />
+      <rect x="700" y="918" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="714" y="921" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="728" y="924" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="742" y="927" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="756" y="930" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="770" y="933" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/><rect x="784" y="936" width="8" height="56" rx="4" fill="#2f6d70" fill-opacity="0.52"/>
+    </g>
+  
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f2f2f0"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(336.00000000000006 270) rotate(40) scale(960 1020.0000000000001)">
+      <stop stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#f1f1ef" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="plinthSide" x1="210" y1="1132" x2="990" y2="1270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7f7f5"/>
+      <stop offset="1" stop-color="#dfdfdb"/>
+    </linearGradient>
+    <linearGradient id="plinthTop" x1="210" y1="1132" x2="210" y2="1270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#efefec"/>
+    </linearGradient>
+    <filter id="shadowSoft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <filter id="shadowDevice" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="20" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="shadowHighlight" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <linearGradient id="dsShell" x1="334" y1="236" x2="866" y2="1034" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fbfbfb"/>
+      <stop offset="1" stop-color="#dadada"/>
+    </linearGradient>
+    <linearGradient id="dsScreen" x1="430" y1="312" x2="770" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e3eef7"/>
+      <stop offset="1" stop-color="#8fa4b6"/>
+    </linearGradient>
+  
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#spotlight)"/>
+  <ellipse cx="600" cy="1300" rx="327.59999999999997" ry="71.76" fill="#000000" fill-opacity="0.08" filter="url(#shadowSoft)"/>
+  <g filter="url(#shadowSoft)">
+    <rect x="210" y="1132" width="780" height="138" rx="30" fill="url(#plinthSide)"/>
+    <rect x="220" y="1140" width="760" height="118" rx="22" fill="url(#plinthTop)"/>
+  </g>
+  <g filter="url(#shadowDevice)">
+    
+    <g transform="translate(0 8)">
+      <rect x="344" y="256" width="512" height="326" rx="44" fill="url(#dsShell)"/>
+      <rect x="344" y="256" width="512" height="326" rx="44" fill="#ffffff" fill-opacity="0.22"/>
+      <rect x="408" y="314" width="384" height="198" rx="20" fill="#bcc7d2"/>
+      <rect x="434" y="338" width="332" height="150" rx="12" fill="url(#dsScreen)"/>
+      <rect x="322" y="584" width="556" height="366" rx="54" fill="url(#dsShell)"/>
+      <rect x="322" y="584" width="556" height="366" rx="54" fill="#ffffff" fill-opacity="0.18"/>
+      <rect x="394" y="646" width="412" height="222" rx="24" fill="#e8eef4"/>
+      <rect x="426" y="678" width="348" height="158" rx="14" fill="url(#dsScreen)"/>
+      
+    <rect x="439.76" y="776" width="36.480000000000004" height="96" rx="11.52" fill="#71757a"/>
+    <rect x="410" y="805.76" width="96" height="36.480000000000004" rx="11.52" fill="#71757a"/>
+  
+      <circle cx="738" cy="792" r="26" fill="#9aa1a9" />
+      <circle cx="782" cy="836" r="26" fill="#9aa1a9" />
+      <circle cx="660" cy="846" r="18" fill="#7e848b" />
+      <rect x="520" y="900" width="62" height="14" rx="7" fill="#8a8f96" fill-opacity="0.7"/>
+      <rect x="600" y="900" width="62" height="14" rx="7" fill="#8a8f96" fill-opacity="0.7"/>
+      <rect x="420" y="286" width="158" height="12" rx="6" fill="#ffffff" fill-opacity="0.28"/>
+      <rect x="394" y="616" width="182" height="12" rx="6" fill="#ffffff" fill-opacity="0.26"/>
+      <rect x="560" y="566" width="80" height="34" rx="17" fill="#f0f0f0" />
+    </g>
+  
+  </g>
+</svg>

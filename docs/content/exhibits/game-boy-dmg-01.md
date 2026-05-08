@@ -32,7 +32,7 @@ trips, and waiting rooms.
 
 ### Visual Artifact
 
-Local SVG illustration at `assets/game-boy-dmg.svg`
+Local SVG illustration at `public/assets/game-boy-dmg.svg`
 
 ### Narrative Placard
 

@@ -10,15 +10,20 @@ making changes.
 
 ## Current File Map
 
-- `index.html` — current chronology hall page
-- `styles.css` — tokens, local typography, tonal surfaces, photo framing,
-  responsiveness
-- `script.js` — guided-route interaction and live room-status updates
-- `assets/` — local exhibit imagery and font assets
-- `PROJECT_OVERVIEW.md` — current-state summary for the whole repository
-- `docs/foundation/` — durable process and design docs
-- `docs/_specs/` — workstream planning and QA artifacts
-- `docs/content/` — content architecture and exhibit packages
+- `app/page.tsx` - current chronology hall route
+- `app/layout.tsx` - root layout, metadata, and global CSS import
+- `app/globals.css` - golden-ratio tokens, local typography, tonal surfaces,
+  artifact framing, and responsiveness
+- `app/route-tracker.tsx` - guided-route interaction and live room-status
+  updates
+- `public/assets/` - local exhibit imagery, uploaded photos, render exports,
+  render sources, and font assets served by Next.js
+- `scripts/generate-device-renders.mjs` - reproducible SVG source generator for
+  local device renders
+- `PROJECT_OVERVIEW.md` - current-state summary for the whole repository
+- `docs/foundation/` - durable process and design docs
+- `docs/_specs/` - workstream planning and QA artifacts
+- `docs/content/` - content architecture and exhibit packages
 
 ## Page Structure
 
@@ -56,7 +61,7 @@ It contains:
 - the framing statement
 - the primary route entry
 - the curatorial note
-- the large stage panel with a credited Game Boy photograph
+- the large stage panel with a local Game Boy render
 
 ### Chronology rooms
 
@@ -71,21 +76,28 @@ Each room contains one or more spotlight surfaces with:
 
 ## CSS Architecture
 
-The current design system in `styles.css` has five layers:
+The current design system in `app/globals.css` has five layers:
 
 ### 1. Token layer
 
 The `:root` block holds shared values for:
 
 - colors
-- spacing
+- golden-ratio spacing
+- golden-ratio type scale, leading, tracking, and fluid sizing
+- semantic typography weights
+- golden-ratio text measures
+- golden-ratio grid fractions
+- golden-ratio artifact frame widths and stage heights
+- golden-ratio responsive breakpoints and motion timing
 - shadow
-- maximum width
+- maximum shell width
+- portrait and landscape frame ratios
 
 ### 2. Typography layer
 
-The page now ships its own local Inter variable fonts through `@font-face`
-rules at the top of the file.
+The page ships its own local Inter variable fonts through `@font-face` rules
+at the top of the file.
 
 ### 3. Layout layer
 
@@ -110,9 +122,9 @@ Shared component-like patterns include:
 - `.statement-card`
 - `.inset-card`
 - `.photo-frame`
-- `.photo-credit`
-- `.spotlight-highlight`
-- `.spotlight-scarcity`
+- `.artifact-note`
+- `.highlight-line`
+- `.scarcity-line`
 - `.stage-tags`
 
 ### 5. Responsive and motion layer
@@ -123,19 +135,24 @@ removes forced smooth scrolling for visitors who opt out of motion.
 
 ## Artifact Rendering
 
-The current page uses credited Unsplash photography for the artifact stages.
+The current page uses local white-background artifact imagery for the artifact
+stages.
 
 Each major image surface now combines:
 
-- a framed photo treatment
+- a framed artifact image
 - museum copy
-- visible photographer and source attribution
+- a small local-source note
 
-That is the current artifact-rendering system for the live homepage.
+Some imagery comes from uploaded device photos under `public/assets/img/`.
+Supplemental render artwork lives under
+`public/assets/device-renders/source/`, and
+`scripts/generate-device-renders.mjs` regenerates the SVG sources that the
+exported PNG render plates are derived from.
 
 ## Interaction Model
 
-`script.js` manages a small but important behavior layer:
+`app/route-tracker.tsx` manages a small but important behavior layer:
 
 - route links scroll visitors to the intended section
 - active route state updates as sections enter view
@@ -159,6 +176,7 @@ Current repo-level verification is intentionally light:
 
 ```bash
 npm run format:check
+npm run build
 ```
 
 Manual browser review and curator review still matter because the museum is a

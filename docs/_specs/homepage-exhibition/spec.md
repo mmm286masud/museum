@@ -19,6 +19,11 @@ The next refinement after the chronology hall must apply the user-supplied
 Digital Curator design system so the homepage reads like a premium editorial
 museum surface rather than a generic static site.
 
+The next refinement after the photography pass must formalize a golden-ratio
+design scale for typography and spacing, while replacing remote artifact photos
+with local white-background device renders that read like cataloged museum
+objects.
+
 ## Design Goals
 
 1. Make the homepage feel like an entrance hall
@@ -29,6 +34,10 @@ museum surface rather than a generic static site.
 6. Keep the route visually clear from Origins through the Modern Era
 7. Apply the approved Digital Curator design language with tonal surfaces,
    glass navigation, and asymmetrical editorial pacing
+8. Establish a consistent golden-ratio rhythm for typography, spacing, and
+   image staging without breaking the approved narrative flow
+9. Replace remote artifact photography with local white-background device
+   renders that keep the exhibit self-contained
 
 ## Architecture
 
@@ -96,8 +105,8 @@ meaning, and narrative value even when the writing remains minimal.
 
 ### Artifact imagery
 
-The homepage may use credited stock photography when it improves artifact
-presentation and preserves the museum tone.
+The homepage may use either credited stock photography or local artifact
+renders when they improve artifact presentation and preserve the museum tone.
 
 Current guardrails:
 
@@ -105,6 +114,25 @@ Current guardrails:
 - attribution must remain visible in the live page
 - imagery should support the device or era being discussed
 - photography must not overpower the exhibit copy or chronology
+
+When local artifact renders replace remote photography:
+
+- the rendered devices should sit on clean white or near-white surfaces
+- the render style should feel cataloged and museum-like rather than playful
+- local assets should be preferred for long-term stability and portability
+
+### Visual scale system
+
+The homepage may unify its typography, spacing, and image framing with a
+golden-ratio-based token system.
+
+Current guardrails:
+
+- body text must remain readable on desktop and mobile
+- display typography may become more disciplined, but not harder to scan
+- golden-ratio usage should stabilize recurring patterns rather than introduce
+  arbitrary visual gimmicks
+- the current Swiss design language must remain intact
 
 ### Artifact choice
 
@@ -122,6 +150,9 @@ Validation for each sprint in this workstream should include:
 5. required-device coverage in the homepage markup and content docs
 6. consistency against the approved design source
 7. visible attribution for any external artifact photography
+8. local asset coverage and absence of broken remote-image dependencies when
+   local renders are used
+9. visual review of the golden-ratio scale across desktop and mobile layouts
 
 ## Sprint Plan
 
@@ -131,8 +162,9 @@ Validation for each sprint in this workstream should include:
 | Sprint 1 | Expand the homepage into a full chronology hall with the required major handheld devices         |
 | Sprint 2 | Apply the Digital Curator design system from the supplied design archive to the chronology hall  |
 | Sprint 3 | Replace placeholder artifact visuals with credited stock photography that fits the museum tone   |
-| Sprint 4 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
-| Sprint 5 | Run a cross-page curator QA pass                                                                 |
+| Sprint 4 | Apply a golden-ratio scale system and replace remote photos with local white-background renders  |
+| Sprint 5 | Extract shared exhibit patterns and decide whether later rooms should split into dedicated pages |
+| Sprint 6 | Run a cross-page curator QA pass                                                                 |
 
 ## Future Considerations
 

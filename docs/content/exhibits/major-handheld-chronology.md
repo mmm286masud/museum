@@ -37,7 +37,7 @@ on the homepage.
 
 ## Room 04 — Multimedia Era
 
-### PlayStation Portable (2004)
+### PlayStation Portable (2004 Japan launch)
 
 - headline: Media, in motion.
 - subheadline: Discover a handheld that invited visitors to explore games, music, and film through one polished object.

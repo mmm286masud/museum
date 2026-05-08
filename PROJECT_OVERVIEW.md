@@ -2,8 +2,9 @@
 
 ## Project Summary
 
-The Retro Handheld Gaming Museum is a static museum website that presents major
-handheld gaming devices as historical artifacts instead of consumer products.
+The Retro Handheld Gaming Museum is a static-export-ready Next.js museum
+website that presents major handheld gaming devices as historical artifacts
+instead of consumer products.
 
 The current live product is a single homepage that moves visitors through a
 six-room chronology:
@@ -62,23 +63,30 @@ The applied design language is:
 - glass top navigation
 - tonal panel hierarchy instead of heavy borders
 - asymmetrical editorial pacing
+- project-wide golden-ratio tokens for typography, weights, tracking, leading,
+  spacing, measures, frames, stages, grids, breakpoints, and motion
 - large typographic hero moments
 - strong whitespace and one-device-at-a-time staging
 
-The live implementation uses local font files, local museum content, and
-credited Unsplash photography for the artifact stages.
+The live implementation uses local font files, local museum content, and local
+white-background artifact imagery made from a mix of uploaded device photos and
+generated PNG render plates.
 
 ## Technology Snapshot
 
-The project intentionally stays lightweight.
+The project intentionally stays lightweight while using a modern framework
+shell.
 
 Current stack:
 
-- `index.html` for the page structure
-- `styles.css` for the full visual system
-- `script.js` for guided navigation behavior
-- local font assets under `assets/`
-- remote Unsplash image delivery with on-page attribution
+- Next.js App Router for routing and static export
+- React and TypeScript for the homepage surface and behavior component
+- `app/page.tsx` for the chronology hall route
+- `app/globals.css` for the full visual system
+- `app/route-tracker.tsx` for guided navigation behavior
+- local font, uploaded photo, and artifact-render assets under
+  `public/assets/`
+- `scripts/generate-device-renders.mjs` for reproducible SVG source generation
 - `npm` and `Prettier` for formatting checks
 
 Current verification baseline:
@@ -86,6 +94,7 @@ Current verification baseline:
 ```bash
 npm install
 npm run format:check
+npm run build
 ```
 
 Manual browser review is still required because this is a visual and narrative
@@ -95,20 +104,22 @@ product.
 
 Top-level files:
 
-- `AGENTS.md` — operating rules for future AI work in this repository
-- `README.md` — quick orientation and startup path
-- `PROJECT_OVERVIEW.md` — this full project summary
-- `index.html` — live homepage
-- `styles.css` — design system and responsive layout
-- `script.js` — navigation behavior and room-state tracking
+- `AGENTS.md` - operating rules for future AI work in this repository
+- `README.md` - quick orientation and startup path
+- `PROJECT_OVERVIEW.md` - this full project summary
+- `app/` - live Next.js App Router surface
+- `next.config.ts` - static export configuration
+- `tsconfig.json` - TypeScript configuration
 
 Primary folders:
 
-- `assets/` — local illustrations and font files
-- `docs/foundation/` — durable design, process, and implementation references
-- `docs/_specs/` — workstreams, sprint plans, and QA artifacts
-- `docs/content/` — content architecture and exhibit source packages
-- `docs/templates/` — reusable planning templates
+- `public/assets/` - local illustrations, uploaded photos, render exports,
+  render sources, and font files served by the app
+- `scripts/` - reproducible asset-generation helpers
+- `docs/foundation/` - durable design, process, and implementation references
+- `docs/_specs/` - workstreams, sprint plans, and QA artifacts
+- `docs/content/` - content architecture and exhibit source packages
+- `docs/templates/` - reusable planning templates
 
 ## Working Method
 
@@ -139,17 +150,20 @@ For a clean orientation path, read these in order:
 
 ## Workstream Status
 
-The repo currently has two major workstreams:
+The repo currently has four major workstreams:
 
-- `orchestration-foundation` — complete
-- `homepage-exhibition` — in progress, with four completed sprints
+- `orchestration-foundation` - complete
+- `homepage-exhibition` - in progress, with five completed sprints
+- `nextjs-platform-migration` - in progress, with one completed sprint
+- `golden-ratio-system` - in progress, with two completed sprints
 
 Completed homepage-exhibition sprints:
 
-- Sprint 0 — entrance hall foundation
-- Sprint 1 — chronology hall expansion
-- Sprint 2 — homepage visual refinement
-- Sprint 3 — credited stock photography integration
+- Sprint 0 - entrance hall foundation
+- Sprint 1 - chronology hall expansion
+- Sprint 2 - homepage visual refinement
+- Sprint 3 - credited stock photography integration
+- Sprint 4 - golden-ratio scale and local artifact renders
 
 ## What Exists Now
 
@@ -158,8 +172,11 @@ Implemented now:
 - a single polished homepage
 - a fixed route system with live room tracking
 - six museum rooms with seven major handheld devices
-- credited stock photography across the exhibit route
+- local white-background artifact imagery across the exhibit route
 - scarcity-oriented museum copy
+- a Next.js App Router static-export foundation
+- a broadened golden-ratio design-token layer, including typography tokens for
+  weights, tracking, leading, and fluid sizing
 - durable planning and QA documentation
 
 Not implemented yet:
@@ -173,5 +190,5 @@ Not implemented yet:
 ## Next Logical Expansion
 
 The next strong sprint would be to split later rooms into dedicated exhibit
-pages or to add richer archival assets and curator notes for the existing
-devices without breaking the current chronology grammar.
+pages or to add richer archival notes and collection context without breaking
+the current chronology grammar.

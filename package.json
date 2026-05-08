@@ -4,10 +4,26 @@
   "private": true,
   "description": "Spec-driven museum website for retro handheld gaming.",
   "scripts": {
-    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
-    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "serve out",
+    "format": "prettier --write \"**/*.{html,css,js,jsx,mjs,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,jsx,mjs,ts,tsx,json,md}\""
   },
   "devDependencies": {
-    "prettier": "^3.8.1"
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "prettier": "^3.8.1",
+    "serve": "^14.2.6",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
   }
 }

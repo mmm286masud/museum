@@ -72,7 +72,7 @@ Read this sequence first:
 6. `docs/_specs/homepage-exhibition/sprints/sprint-1-chronology-hall.md`
 7. `docs/_specs/homepage-exhibition/qa/sprint-1-post-implementation.md`
 8. `docs/content/exhibits/major-handheld-chronology.md`
-9. `index.html`, `styles.css`, `script.js`
+9. `app/page.tsx`, `app/globals.css`, `app/route-tracker.tsx`
 
 That chain shows how one small slice became a fuller chronology hall.
 

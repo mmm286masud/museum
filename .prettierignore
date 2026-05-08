@@ -1,3 +1,7 @@
-_reference_repo/
 node_modules/
+.next/
+out/
+design_tmp/
+_reference_repo/
+next-env.d.ts
 package-lock.json

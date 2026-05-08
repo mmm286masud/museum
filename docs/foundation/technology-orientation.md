@@ -2,16 +2,15 @@
 
 ## Why This Document Exists
 
-This project is smaller than the reference Next.js repository it learned from,
-so its stack is simpler. The point of this document is to explain the current
-tools accurately instead of pretending the project already has a larger
-framework than it does.
+This project now uses Next.js, but it remains intentionally small. The point of
+this document is to explain the current tools accurately without implying that
+the museum has a larger application platform than it actually does.
 
 ## Current Stack
 
-### HTML
+### Next.js App Router
 
-`index.html` is the current museum page shell.
+`app/page.tsx` is the current museum route.
 
 It defines:
 
@@ -22,24 +21,27 @@ It defines:
 - the closing CTA and footer sequence
 - the semantic reading order for the exhibit
 
+`app/layout.tsx` defines the root document shell, page metadata, and global CSS
+import.
+
 ### CSS
 
-`styles.css` is the visual system.
+`app/globals.css` is the visual system.
 
 It contains:
 
 - the Swiss-style grid
 - local Inter variable font loading
-- typography choices
-- spacing and color tokens
+- golden-ratio typography, semantic type weights, tracking, leading, fluid type,
+  spacing, measure, frame, stage, grid, breakpoint, and motion tokens
 - tonal surface hierarchy and glass navigation
-- photo framing, credits, and exhibit-stage presentation
+- artifact framing and exhibit-stage presentation
 - responsive behavior
 - restrained motion
 
-### JavaScript
+### React client behavior
 
-`script.js` adds the guided-route behavior.
+`app/route-tracker.tsx` adds the guided-route behavior.
 
 It currently handles:
 
@@ -49,30 +51,31 @@ It currently handles:
 
 ### Local assets
 
-Local assets live in `assets/`.
+Public local assets live in `public/assets/`.
 
 They currently include:
 
-- a local SVG illustration of the Game Boy DMG-01
-- local Inter font files under `assets/fonts/`
+- local Inter font files under `public/assets/fonts/`
+- local uploaded device photos under `public/assets/img/`
+- local PNG device renders under `public/assets/device-renders/`
+- local SVG source renders under `public/assets/device-renders/source/`
 
-### Remote media
+### Local generation helper
 
-The homepage also uses remote Unsplash image URLs for exhibit photography.
-
-That choice keeps the page visually rich without introducing a build pipeline,
-but it also means the production surface depends on external image delivery.
-Each live image must keep visible attribution in the page markup.
+`scripts/generate-device-renders.mjs` generates the SVG source files under
+`public/assets/device-renders/source/` used for the local render portion of the
+artifact-image pipeline.
 
 ### npm and Prettier
 
-This repository now includes a small Node-based tooling layer for formatting
-checks.
+This repository includes a small Node-based tooling layer for formatting and a
+Next.js production build check.
 
-Current command:
+Current commands:
 
 ```bash
 npm run format:check
+npm run build
 ```
 
 This is not a full test stack yet. It is the current minimum quality gate.
@@ -81,20 +84,20 @@ This is not a full test stack yet. It is the current minimum quality gate.
 
 ### Installed and active now
 
-- HTML5
+- Next.js App Router
+- React
+- TypeScript
 - CSS3
-- vanilla JavaScript
-- local SVG and font assets
-- remote Unsplash photography
+- local font, uploaded image, and render assets
+- a local render-source generation helper
 - npm
 - Prettier
 
 ### Not yet part of the repo
 
-- a framework such as Next.js
 - automated browser tests
 - CI/CD
-- static-host deployment automation
+- deployment automation
 
 Do not document those as live parts of the stack until they actually exist.
 
@@ -102,11 +105,12 @@ Do not document those as live parts of the stack until they actually exist.
 
 For this repository, the stack layers are:
 
-1. HTML for structure
-2. CSS for visual system and responsiveness
-3. JavaScript for guided interaction
-4. npm and Prettier for baseline verification
-5. process artifacts for scope control and durable project memory
+1. Next.js App Router for the public route and static export
+2. React and TypeScript for page structure and narrow client behavior
+3. CSS for visual system and responsiveness
+4. `public/assets/` for served fonts and artifact imagery
+5. npm, Prettier, and `next build` for baseline verification
+6. process artifacts for scope control and durable project memory
 
 The process layer matters as much as the code layer because the site is being
 built iteratively.

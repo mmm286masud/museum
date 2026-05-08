@@ -84,6 +84,7 @@ Current local verification:
 
 ```bash
 npm run format:check
+npm run build
 ```
 
 Manual curator review is also required.

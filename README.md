@@ -11,11 +11,13 @@ time.
 
 ## What This Project Is
 
-- a static web museum built with HTML, CSS, JavaScript, local assets, and
-  credited Unsplash photography
-- a Swiss-style digital exhibit focused on handheld systems as historical artifacts
+- a static-export-ready Next.js museum built with the App Router, React,
+  TypeScript, local assets, and local museum imagery
+- a Swiss-style digital exhibit focused on handheld systems as historical
+  artifacts
 - a premium editorial homepage organized as a chronological museum route
-- a repository that treats AI as an implementation assistant, not as the system of record
+- a repository that treats AI as an implementation assistant, not as the
+  system of record
 
 ## Current State
 
@@ -27,7 +29,8 @@ The current public slice is a chronology-hall homepage with:
 - seven major handheld milestones from Game Boy to Switch
 - premium spotlight copy written in museum language
 - scarcity framing written as preservation context
-- tonal surfaces, asymmetrical pacing, and credited Unsplash artifact images
+- tonal surfaces, asymmetrical pacing, project-wide golden-ratio rhythm, and
+  local artifact imagery
 
 The current workstreams and their status live in
 [`docs/_specs/README.md`](docs/_specs/README.md).
@@ -114,6 +117,7 @@ This repository currently has a lightweight verification baseline:
 ```bash
 npm install
 npm run format:check
+npm run build
 ```
 
 Manual QA is still required for:
@@ -127,21 +131,20 @@ The current verification model is documented in
 
 ## Repository Structure
 
-```text
-.
-├── assets/                 # local exhibit imagery and font assets
-├── docs/
-│   ├── foundation/         # durable process and design reference docs
-│   ├── _specs/             # workstream specs, sprint docs, and QA artifacts
-│   ├── content/            # content architecture and exhibit packages
-│   └── templates/          # reusable planning templates
-├── PROJECT_OVERVIEW.md     # full repository overview and current-state map
-├── index.html              # chronology hall homepage
-├── styles.css              # visual system, typography, surfaces, and photo presentation
-├── script.js               # guided route interaction and room status updates
-├── package.json            # local quality scripts
-└── AGENTS.md               # repository operating rules for future AI sessions
-```
+- `app/` - Next.js App Router homepage, root layout, route behavior component,
+  and global visual system
+- `public/assets/` - local exhibit imagery, uploaded artifact photos, PNG
+  artifact renders, SVG source renders, and font assets served by Next.js
+- `scripts/` - local asset-generation helpers such as
+  `generate-device-renders.mjs`
+- `docs/foundation/` - durable process and design reference docs
+- `docs/_specs/` - workstream specs, sprint docs, and QA artifacts
+- `docs/content/` - content architecture and exhibit packages
+- `PROJECT_OVERVIEW.md` - full repository overview and current-state map
+- `next.config.ts` - static export configuration
+- `tsconfig.json` - TypeScript configuration for the live Next.js app
+- `package.json` - local quality scripts
+- `AGENTS.md` - repository operating rules for future AI sessions
 
 ## Main References
 

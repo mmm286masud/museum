@@ -15,14 +15,15 @@ Specs, sprint docs, and QA notes control:
 
 ### Layer 2: Deterministic local tooling
 
-Current command:
+Current commands:
 
 ```bash
 npm run format:check
+npm run build
 ```
 
-This gives the project one objective local gate for formatting consistency
-across HTML, CSS, JavaScript, and Markdown.
+These give the project objective local gates for formatting consistency and for
+the Next.js static production build.
 
 ### Layer 3: Manual curator QA
 
@@ -44,13 +45,14 @@ Manual review must still check:
 - process artifacts in `docs/_specs/`
 - durable foundation docs in `docs/foundation/`
 - local formatting check with Prettier
+- Next.js static build check
 
 ### Not implemented yet
 
 - CI/CD
 - browser automation
-- static-host deployment pipeline
 - Lighthouse or automated accessibility scoring
+- deployment automation
 
 Do not claim those systems exist until they are actually added.
 
@@ -61,14 +63,14 @@ For most current workstreams:
 1. read the governing spec and sprint
 2. implement the bounded change
 3. run `npm run format:check`
-4. perform a manual code and content review
-5. perform curator QA against the project criteria
+4. run `npm run build`
+5. perform a manual code and content review
+6. perform curator QA against the project criteria
 
 ## Future Direction
 
 As the museum grows, useful next layers would be:
 
-- a local preview server command
 - browser-based responsive checks
 - automated accessibility review
 - static deployment automation

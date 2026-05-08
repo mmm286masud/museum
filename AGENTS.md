@@ -80,10 +80,11 @@ Do not collapse those roles into each other.
 
 ## Verification Rules
 
-Current required repository command:
+Current required repository commands:
 
 ```bash
 npm run format:check
+npm run build
 ```
 
 Also perform manual review of changed pages and updated docs.
